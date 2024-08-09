@@ -24,16 +24,15 @@ With a time limit it seemed easier to go for a minimalist approach. I opted for 
 
 The brief mentioned swiping, so I tried to make the app friendly to narrow screens as well as large.
 
-The images are all squarish (on a laptop) the images are sandwhiched between the Searchbar and ModeSelection and will try to grow to fill the space. My initial idea was to have the images be in their original aspect ratios and scaled to fit, I thought this would be useful as a designer could see the images in the correct aspect ratio as they were intended. However, I overcomplicated by making a custom image component to handle image resize along with other features and ended up wasting a lot of time. Finally, I just mapped through the first 10 images from the fetch and contain them in the same div dimensions. 
+The images are all squarish (on a laptop) the images are sandwhiched between the Searchbar and ModeSelection and will try to grow to fill the space. My initial idea was to have the images be in their original aspect ratios and scaled to fit, I thought this would be useful as a designer could see the images in the correct aspect ratio as they were intended. However, I overcomplicated by making a custom image component to handle image resize along with other features and ended up wasting a lot of time. Finally, I just mapped through the first 10 images from the fetch and contained them in the same div dimensions. 
 
 ## If I had more time
-- Design wise it's clean but boring. With more time, I would have played with color and components, and add more transitions. The layout is flexible but not optimal for large devices. 
+- Design wise it's clean but boring. With more time, I would have played with color, components, and add more transitions. The layout is flexible but not optimal for large devices. 
 - I wasted a lot of time exploring how to pre-load images etc (or loading them in batches), as every swipe causes a state change and hence a re-render meaning all the images in the stack have to be reloaded. But it seems this isn't the case somehow react can reconcilliate or I have fast internet. With more time id like to get to the bottom of that.
 - The fetch provides 100 images urls, when those images run out another fetch should be called.
+- Add data persistence
 - Extra Credit: I was over the 4hr mark so I couldn't attempt this, I will include my approach to this below.
 
 ## Extra Credit
-I have never done such a problem before but I assume it requires a statistical or deep learning library. 
-
-My initial thoughts are that there's a distinction between what the user says they want and what they actually want (or what google image search actually returns). To bridge this, I'd make a tool that takes the search query and the tags of the liked images (could also use dislikes to have a negative weight, Im not too sure) to create some tree like data structure. When the search query uses words it has before, the tool will inject some additional words to better describe what the user wants.
+My initial thoughts are that there's a distinction between what the user says they want and what they actually want (or what google image search returns). To bridge this, I'd make a tool that takes the search query and the tags of the liked images (could also use dislikes to have a negative weight, Im not too sure) to create some tree like data structure. When the search query uses words it has before, the tool will inject some additional words to better describe what the user wants.
 
