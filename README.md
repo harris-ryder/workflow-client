@@ -24,7 +24,7 @@ With a time limit it seemed easier to go for a minimalist approach. I opted for 
 
 The brief mentioned swiping, so I tried to make the app friendly to narrow screens as well as large.
 
-The images are all squarish (on a laptop) the images are sandwhiched between the Searchbar and ModeSelection and will try to grow to fill the space. My initial idea was to have the images be in their original aspect ratios and scaled to fit, I thought this would be useful as a designer could see the images in the correct aspect ratio as they were intended. However, I overcomplicated by making a custom image component to handle image resize and grey out images that weren't at the top of the stack and wasted a lot of time. Finally, I just mapped through the first 10 images from the fetch and contain them in the same div dimensions. 
+The images are all squarish (on a laptop) the images are sandwhiched between the Searchbar and ModeSelection and will try to grow to fill the space. My initial idea was to have the images be in their original aspect ratios and scaled to fit, I thought this would be useful as a designer could see the images in the correct aspect ratio as they were intended. However, I overcomplicated by making a custom image component to handle image resize along with other features and ended up wasting a lot of time. Finally, I just mapped through the first 10 images from the fetch and contain them in the same div dimensions. 
 
 ## If I had more time
 - Design wise it's clean but boring. With more time, I would have played with color and components, and add more transitions. The layout is flexible but not optimal for large devices. 
