@@ -53,7 +53,7 @@ const useAppStore = create<AppState & AppActions>((set, get) => ({
 
     const apiUrl = import.meta.env.VITE_SERVER_API;
     try {
-      const response = await fetch(`${apiUrl}?query=${encodeURIComponent(newSearchQuery)}`);
+      const response = await fetch(`http://${apiUrl}?query=${encodeURIComponent(newSearchQuery)}`);
       const data = await response.json();
       set({ searchResult: data['images_results'] || [] });
     } catch (error) {
