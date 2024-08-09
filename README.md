@@ -3,8 +3,9 @@
 ## How to Run
 Built using vite, react and typescript
 
-1. Create a .env file include VITE_SERVER_API = {insert your server api}
-2. Run the following commands
+1. To run locally, switch to the local branch
+2. Create a .env file include VITE_SERVER_API = {insert your server api}
+3. Run the following commands
 ```js
 npm install
 npm run dev
